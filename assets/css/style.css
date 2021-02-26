@@ -1,0 +1,8 @@
+#game-symbols-container {
+  display: flex;
+  justify-content: flex-start;
+}
+h4 {
+  padding: 10px;
+  border: solid lightseagreen 2px;
+}

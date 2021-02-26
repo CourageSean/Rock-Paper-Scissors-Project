@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rock Paper Scissors</title>
+    <link rel="stylesheet" href="assets/css/style.css" />
+  </head>
+  <body>
+    <input type="button" value="START" id="startBtn" />
+    <input type="button" value="RESET" id="resetBtn" />
+    <div>
+      <h2>how many rounds?</h2>
+      <div>
+        <h3>
+          <span class="roundsTxt"></span>/ <span class="roundsTxt"></span>
+        </h3>
+      </div>
+      <label for="roundFive">Five</label>
+      <input
+        type="radio"
+        name="rounds"
+        class="roundInput"
+        onchange="startGame()"
+        checked
+      />
+      <label for="roundTen">Ten</label>
+      <input
+        type="radio"
+        name="rounds"
+        class="roundInput"
+        onchange="startGame()"
+      />
+      <br />
+      <label for="roundFifteen">Fifteen</label>
+      <input
+        type="radio"
+        name="rounds"
+        class="roundInput"
+        onchange="startGame()"
+      />
+      <label for="roundTwenty">Twenty</label>
+      <input
+        type="radio"
+        name="rounds"
+        class="roundInput"
+        onchange="startGame()"
+      />
+    </div>
+
+    <div>
+      <h2>Score</h2>
+      <h3>
+        <span id="scoreUserTxt"></span>: <span id="scoreComputerTxt"></span>
+      </h3>
+    </div>
+
+    <div id="game-symbols-container">
+      <h4 id="rockBtn">ROCK</h4>
+      <h4 id="paperBtn">PAPER</h4>
+      <h4 id="scissorsBtn">SCISSORS</h4>
+    </div>
+
+    <script src="assets/js/main.js"></script>
+  </body>
+</html>
