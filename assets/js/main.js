@@ -11,6 +11,7 @@ const startBtn = document.getElementById("startBtn");
 const resetBtn = document.getElementById("resetBtn");
 let counter = 0;
 
+//Start Game
 const startGame = () => {
   if (roundInput[0].checked) {
     roundsTxt[1].innerHTML = "5";
@@ -21,7 +22,6 @@ const startGame = () => {
   } else if (roundInput[3].checked) {
     roundsTxt[1].innerHTML = "20";
   }
-
   scoreUserTxt.innerHTML = `${scoreUserValue}`;
   scoreComputerTxt.innerHTML = `${scoreComputerValue}`;
 };
@@ -35,11 +35,6 @@ resetBtn.addEventListener("click", resetGame);
 let weaponsArray = ["Rock", "Paper", "Scissors"];
 //Computer Random Weapon
 let computerWeapon = () => weaponsArray[Math.floor(Math.random() * 3)];
-
-//User Weapons
-// const chooseWeaponRock = () => weaponsArray[0];
-const chooseWeaponPaper = () => weaponsArray[1];
-const chooseWeaponScissors = () => weaponsArray[2];
 
 //Battle with Rock Function
 const battleWithRock = () => {
@@ -100,7 +95,7 @@ const battleWithScissors = () => {
     scoreUserTxt.innerHTML = `${scoreUserValue}`;
   }
 };
-
+//Compare Function
 const compareFunction = () => {
   if (scoreUserValue === scoreComputerValue) {
     console.log("This was a draw, try again");
@@ -116,7 +111,6 @@ const compareFunction = () => {
 };
 
 //Counter function
-
 const CounterFunctionRock = () => {
   if (counter < Number(roundsTxt[1].innerHTML) - 1) {
     counter = counter + 1;
@@ -151,11 +145,11 @@ const CounterFunctionScissors = () => {
     battleWithScissors();
     counter = counter + 1;
     roundsTxt[0].innerHTML = `${counter}`;
-
     compareFunction();
   }
 };
 
+//Reset Game
 function resetGame() {
   startGame();
   scoreUserValue = 0;
@@ -167,8 +161,5 @@ function resetGame() {
 }
 
 rockBtn.addEventListener("click", CounterFunctionRock);
-
-// paperBtn.addEventListener("click", chooseWeaponPaper);
 paperBtn.addEventListener("click", CounterFunctionPaper);
-// scissorsBtn.addEventListener("click", chooseWeaponScissors);
 scissorsBtn.addEventListener("click", CounterFunctionScissors);
