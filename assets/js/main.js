@@ -163,3 +163,6 @@ function resetGame() {
 rockBtn.addEventListener("click", CounterFunctionRock);
 paperBtn.addEventListener("click", CounterFunctionPaper);
 scissorsBtn.addEventListener("click", CounterFunctionScissors);
+
+//test
+let b;
